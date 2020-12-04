@@ -1,0 +1,48 @@
+.services {
+  padding: 0 125px 90px;
+  background: url(../assets/our_services_bg.jpg);
+  background-size: cover;
+  background-position: center center;
+
+  .section-title {
+    margin-bottom: 100px;
+  }
+
+  .section-title__title {
+    font-size: 60px;
+    margin-bottom: 40px;
+  }
+
+  .section-title__subtitle {
+    font-size: 20px;
+  }
+
+  .section-title__text {
+    font-size: 14px;
+  }
+
+  .mt-0 {
+    margin-top: 4rem !important;
+  }
+
+  .mb-0 {
+    margin-bottom: 4rem !important;
+  }
+
+  .services-card {
+    max-width: 220px;
+    background-color: #c20a13;
+    padding: 1.25rem;
+    margin-bottom: 15px;
+  }
+
+  .services-card-title {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 50px;
+  }
+
+  .services-card-text {
+    font-size: 14px;
+  }
+}
