@@ -13,6 +13,9 @@ const sourcemaps = require('gulp-sourcemaps');
 
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
+
+const concat = require('gulp-concat');
+
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 
@@ -49,7 +52,7 @@ function html() {
 }
 
 function styles() {
-  return src(paths.src + 'styles/style.scss')
+  return src(paths.src + 'styles/main.min.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compressed'
@@ -61,11 +64,19 @@ function styles() {
 }
 
 function js() {
-  return src(paths.src + 'scripts/app.js')
+  return src([
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/@popperjs/core/dist/umd/popper.js',
+      'node_modules/bootstrap/dist/js/bootstrap.js',
+      paths.src + 'scripts/main.js'
+    ])
+    .pipe(concat('main.min.js'))
+    // return src(paths.src + 'scripts/main.js')
     .pipe(sourcemaps.init())
     .pipe(babel({
       presets: ["@babel/preset-env"]
     }))
+
     .pipe(uglify())
     .pipe(sourcemaps.write('.'))
     .pipe(connect.reload())
@@ -81,7 +92,7 @@ function assets() {
 function watching(cb) {
   watch(paths.src + 'index.html', html);
   watch(paths.src + '**/*.scss', styles);
-  watch(paths.src + 'scripts/app.js', js);
+  watch(paths.src + 'scripts/main.js', js);
   watch(paths.src + 'assets/**/*', assets);
 
   cb();

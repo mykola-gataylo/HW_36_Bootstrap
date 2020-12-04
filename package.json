@@ -1,8 +1,8 @@
 {
   "name": "hw_gulp_starter",
   "version": "1.0.0",
-  "description": "Gulp Starter",
-  "main": "index.js",
+  "description": "HW_36_Bootstrap",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,15 +12,19 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
+    "@popperjs/core": "^2.5.4",
     "autoprefixer": "^10.0.4",
+    "bootstrap": "^4.5.3",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
     "gulp-postcss": "^9.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "jquery": "^3.5.1",
     "node-sass": "^5.0.0",
     "postcss": "^8.1.10"
   },

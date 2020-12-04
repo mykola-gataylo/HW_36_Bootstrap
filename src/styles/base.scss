@@ -1,0 +1,115 @@
+/* плавность скрола */
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* добавим плавность переходов для всех элементов страницы */
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.1s ease-in-out;
+}
+
+/* без ограничивающей рамки */
+
+input,
+button,
+button:active,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* наследует текст блока */
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+/* крестик для удаления введенного текста в поле input */
+
+input::-ms-clear {
+  display: none;
+}
+
+/* текст по центру(горизонтально) */
+
+input {
+  display: block;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}
+
+/* курсор на кнопку */
+
+button {
+  cursor: pointer;
+}
+
+/* маркерованный список(без маркеров) */
+
+ul {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* обнуление заголовков */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* обнуление ссылки и цвет наследует */
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.1s ease-in-out;
+}
