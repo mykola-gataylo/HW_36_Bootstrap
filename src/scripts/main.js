@@ -24,3 +24,27 @@
   }
 
   google.maps.event.addDomListener(window, 'load', initMap);
+
+  // class active to navbar-link
+
+  let NavLink = document.getElementsByClassName("nav-link-custom");
+
+  for (let i = 0; i < NavLink.length; i++) {
+    NavLink[i].addEventListener('click', function () {
+      for (let i = 0; i < NavLink.length; i++) {
+        NavLink[i].classList.remove('active');
+      }
+      this.classList.add('active');
+    })
+  }
+
+  let scroll = scrollY;
+  const meetBlock = document.getElementById("meet");
+
+  window.addEventListener("scroll", function () {
+    if (scrollY > scroll) {
+      meetBlock.classList.add("animate__flip");
+    } else {
+      meetBlock.classList.remove("animate__flip");
+    }
+  });

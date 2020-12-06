@@ -4,7 +4,6 @@ html {
 }
 
 header {
-  // height: 100%;
   padding: 0 125px 90px;
 
   .navbar-custom {
@@ -20,6 +19,10 @@ header {
     height: 75px;
     padding-top: 30px;
     text-align: center;
+  }
+
+  .active {
+    background-color: rgba($color: #f8f5f5, $alpha: 0.3);
   }
 
   .carousel-indicators-custom {
@@ -41,5 +44,4 @@ header {
     width: 50px;
     height: 50px;
   }
-
 }

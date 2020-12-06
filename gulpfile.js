@@ -71,7 +71,6 @@ function js() {
       paths.src + 'scripts/main.js'
     ])
     .pipe(concat('main.min.js'))
-    // return src(paths.src + 'scripts/main.js')
     .pipe(sourcemaps.init())
     .pipe(babel({
       presets: ["@babel/preset-env"]
