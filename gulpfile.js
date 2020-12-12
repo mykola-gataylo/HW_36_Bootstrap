@@ -97,5 +97,13 @@ function watching(cb) {
   cb();
 }
 
+const gulp = require('gulp');
+const ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function () {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
 exports.build = series(clean, html, styles, js, assets);
 exports.default = series(clean, html, styles, js, assets, parallel(connectServer, watching));
