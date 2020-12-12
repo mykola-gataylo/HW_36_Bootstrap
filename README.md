@@ -1,3 +1,7 @@
+------
+permalink: /index.html
+------
+
 # Gulp Starter
 
 Description of project
