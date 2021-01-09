@@ -20,6 +20,18 @@
   .work {
     padding: 0 65px 45px;
 
+    .work-cards {
+      padding: 0;
+
+      .work-card {
+        height: auto;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
     .porfolio {
       flex-direction: column;
 

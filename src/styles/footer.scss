@@ -14,4 +14,33 @@
     min-height: 50px;
     background: #639b92;
   }
+
+  .icon-facebook:hover,
+  .icon-twitter:hover,
+  .icon-pinterest:hover,
+  .icon-linkedin:hover {
+    font-size: 32px;
+  }
+
+  .icon-facebook:hover {
+    background: #4867AA;
+    color: #FFFFFF;
+  }
+
+  .icon-pinterest:hover {
+    background: #FFFFFF;
+    color: #E60023;
+  }
+
+  .icon-linkedin:hover {
+    background: #0A66C2;
+  }
+
+  .icon-twitter:hover {
+    background: #FFFFFF;
+    color: #1DA1F2;
+  }
+
+
+
 }
